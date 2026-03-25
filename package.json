@@ -1,7 +1,7 @@
 {
-  "name": "titanbot-custom",
-  "version": "2.0.0",
-  "description": "Modular Ultimate Community Bot by Touchpoint Support",
+  "name": "starbot-core",
+  "version": "1.0.0",
+  "description": "Custom community utility and economy engine for StarBot.",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
