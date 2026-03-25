@@ -97,10 +97,14 @@ class starclient extends Client {
         ? 'Optional in-memory mode (data resets after restart)'
         : 'Connected (persistent data enabled)';
       const handlerSummary = `${this.buttons.size} buttons, ${this.selectMenus.size} menus, ${this.modals.size} modals`;
-      startupLog(
-        `ONLINE ✅ | ${this.commands.size} commands loaded | ${handlerSummary} | Database: ${databaseMode}`
-      );
-      
+      const splash = `
+***************************************************
+* STARBOT CORE ACTIVATED             *
+* Systems: ${this.commands.size} Commands Loaded        *
+* Database: ${dbStatus.connectionType}       *
+***************************************************
+`;
+console.log(splash);
       this.setupCronJobs();
     } catch (error) {
       logger.error('Failed to start bot:', error);
