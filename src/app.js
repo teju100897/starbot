@@ -18,7 +18,7 @@ import { checkBirthdays } from './services/birthdayService.js';
 import { checkGiveaways } from './services/giveawayService.js';
 import { loadCommands, registerCommands as registerSlashCommands } from './handlers/commandLoader.js';
 
-class TitanBot extends Client {
+class starclient extends Client {
   constructor() {
     super({
       intents: [
@@ -361,7 +361,8 @@ class TitanBot extends Client {
 }
 
 try {
-  const bot = new TitanBot();
+  // 1. Create the instance using your new class name
+  const bot = new StarClient(); 
   
   const setupShutdown = () => {
     process.on('SIGTERM', () => bot.shutdown('SIGTERM'));
@@ -385,7 +386,8 @@ try {
   process.exit(1);
 }
 
-export default TitanBot;
+// 2. Export the new class name instead of TitanBot
+export default StarClient;
 
 
 
